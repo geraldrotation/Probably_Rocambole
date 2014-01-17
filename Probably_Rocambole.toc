@@ -1,0 +1,6 @@
+## Interface: 50400
+## Title: Probably - Rocambole
+## Notes: ProbablyEngine Custom Restoration Druid
+## Dependencies: Probably
+
+rotation.lua
