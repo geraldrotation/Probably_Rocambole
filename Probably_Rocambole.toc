@@ -1,5 +1,5 @@
 ## Interface: 50400
-## Title: Probably - Rocambole
+## Title: Probably [|cff7d0aC9Rocambole|r]
 ## Notes: ProbablyEngine Custom Restoration Druid
 ## Dependencies: Probably
 

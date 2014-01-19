@@ -39,9 +39,6 @@ ProbablyEngine.rotation.register_custom(105, "Rocambole", {
 
 --Ima Troll
  { "Berserking", "player.buff(Bloodlust)" },
- 
-  --Cancel Druid Forms
- { "!/cancelaura Cat Form", "player.buff(137452)" },
 
 ------------------------------
 --Incarnation Talent
@@ -78,15 +75,17 @@ ProbablyEngine.rotation.register_custom(105, "Rocambole", {
 ------------------------------
 --SoO Dispells
 ------------------------------
- { "!88423", "@coreHealing.needsDispelled(Aqua Bomb)" },
- { "!88423", "@coreHealing.needsDispelled(Aqua Bomb)" },
- { "!88423", "@coreHealing.needsDispelled(Shadow Word: Bane)" }, 
- { "!88423", "@coreHealing.needsDispelled(Lingering Corruption)" },
- { "!88423", { "player.buff(144359)", "@coreHealing.needsDispelled(Mark of Arrogance)" }},
- { "!88423", "@coreHealing.needsDispelled(Corrosive Blood)" }, 
+ { "88423", "@coreHealing.needsDispelled(Aqua Bomb)" },
+ { "88423", "@coreHealing.needsDispelled(Aqua Bomb)" },
+ { "88423", "@coreHealing.needsDispelled(Shadow Word: Bane)" }, 
+ { "88423", "@coreHealing.needsDispelled(Lingering Corruption)" },
+ { "88423", { "player.buff(144359)", "@coreHealing.needsDispelled(Mark of Arrogance)" }},
+ { "88423", "@coreHealing.needsDispelled(Corrosive Blood)" }, 
+ { "8936", { "lowest.health < 100", "!lowest.buff(8936)" }, "target.id(71604)" },
+ { "5185", { "lowest.health < 100", "lowest.buff(8936)", }, "target.id(71604)" },
 
 ------------------------------
--- Instant Tank Bress
+--TANK REBIRTH
 ------------------------------
  { "Rebirth", {
   "player.buff(132158)",
@@ -99,9 +98,6 @@ ProbablyEngine.rotation.register_custom(105, "Rocambole", {
    "!tank.range > 40"
  }, "tank" },
 
-------------------------------
--- Tank Bress
-------------------------------
  { "Rebirth", {
    "!player.buff(Nature's Swiftness)",
    "tank.Health = 0",
@@ -114,7 +110,6 @@ ProbablyEngine.rotation.register_custom(105, "Rocambole", {
 --SELF!
  { "Barkskin", "player.health <= 40" },
  { "Might of Ursoc", "player.health < 30" },
- { "!/cancelaura Bear Form", "player.buff(Might of Ursoc)" },
  
 -- Healthstone
  {"#5512", "player.health <= 45"}, 
@@ -230,9 +225,5 @@ ProbablyEngine.rotation.register_custom(105, "Rocambole", {
  
  -- Healthstone
  {"#5512", "player.health <= 45"}, 
-
- --Cancel Druid Forms
- { "!/cancelaura Cat Form", "player.buff(137452)" },
-  { "!/cancelaura Bear Form", "player.buff(Might of Ursoc)" },
-  
+ 
 })
